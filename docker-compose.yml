@@ -1,0 +1,13 @@
+# Use only in development
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - '3000:3000'
+    tty: true
+    volumes:
+      - .:/app:delegated
+    restart: always
